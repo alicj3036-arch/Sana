@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>برای فسقلی من 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box}
+body{
+ margin:0; font-family:Vazirmatn,sans-serif; color:#5b2440;
+ background:radial-gradient(circle at 20% 10%,#fff 0,#ffe8f2 28%,#ffc7dc 65%,#f7a9c8 100%);
+ min-height:100vh; overflow-x:hidden;
+}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.heart{position:absolute;font-size:22px;animation:float linear infinite;opacity:.7}
+@keyframes float{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:25px;position:relative}
+.card{
+ width:min(92vw,760px); background:rgba(255,255,255,.72); backdrop-filter:blur(14px);
+ border:1px solid rgba(255,255,255,.9); border-radius:32px; padding:35px 25px;
+ box-shadow:0 25px 70px rgba(132,38,82,.18); text-align:center;
+}
+.badge{display:inline-block;background:#fff0f6;border-radius:999px;padding:8px 16px;font-size:14px;color:#b63869}
+h1{font-size:clamp(32px,8vw,58px);margin:18px 0 8px;color:#b82f68}
+h2{font-size:28px;margin:8px 0 18px;color:#a42c5e}
+p{line-height:2;font-size:17px}
+.big-heart{font-size:70px;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{transform:scale(1.13)}}
+button{
+ border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:16px;
+ padding:14px 23px;border-radius:18px;background:linear-gradient(135deg,#ff5d99,#d92d70);
+ color:white;box-shadow:0 10px 25px rgba(217,45,112,.25);transition:.2s
+}
+button:hover{transform:translateY(-2px) scale(1.02)}
+.hidden{display:none!important}
+.note{
+ text-align:right;background:#fff8fb;border-radius:22px;padding:22px;margin-top:22px;
+ border:1px solid #ffd2e2
+}
+.love-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:22px 0}
+.reason{background:white;border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(120,30,70,.07)}
+.gift{font-size:55px;margin:12px}
+#final{min-height:0;padding-top:0;padding-bottom:70px}
+.small{font-size:13px;opacity:.7}
+.counter{font-weight:800;color:#c32f69;font-size:20px;margin:15px}
+.confetti{position:fixed;top:-20px;font-size:20px;animation:fall 2.8s linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="bg" id="bg"></div>
+
+<section class="screen" id="welcome">
+ <div class="card">
+   <div class="big-heart">💗</div>
+   <span class="badge">یک هدیه‌ی کوچیک از راه دور</span>
+   <h1>روز دختر مبارک، فسقلی من! 🌷</h1>
+   <p>چون امروز پیشت نیستم که یه هدیه رو با دست خودم بدم بهت،<br>
+   گفتم یه هدیه بسازم که فقط برای <b>تو</b> باشه.</p>
+   <button onclick="openGift()">بازش کن 🎁</button>
+   <p class="small">یه سورپرایز کوچولو داخلشه...</p>
+ </div>
+</section>
+
+<section class="screen hidden" id="gift">
+ <div class="card">
+   <span class="badge">برای خاص‌ترین دختر 💕</span>
+   <h2>این صفحه فقط برای تو ساخته شده</h2>
+   <div class="note">
+    <p>
+    فسقلی جانم،<br>
+    امروز روز دختره و شاید ناراحت‌کننده باشه که من ازت دورم و نمی‌تونم
+    همون‌جوری که دوست دارم یه هدیه قشنگ بذارم توی دستت...
+    ولی دلم نمی‌خواست این روز برامون معمولی بگذره. 🌸
+    </p>
+    <p>
+    پس اینو ساختم که هر وقت بازش می‌کنی یادت بیاد یه نفر یه جای دور،
+    با کلی ذوق نشسته و فکر کرده چطوری لبخند بیاره روی صورتت. 🥹💗
+    </p>
+   </div>
+   <button onclick="showReasons()">یه چیز دیگه هم هست 👀</button>
+ </div>
+</section>
+
+<section class="screen hidden" id="reasons">
+ <div class="card">
+   <span class="badge">چرا تو؟ 💞</span>
+   <h2>چندتا دلیل کوچولو...</h2>
+   <div class="love-list">
+    <div class="reason">🌷 چون بودنت خودش قشنگه.</div>
+    <div class="reason">🫶 چون با تو معمولی‌ترین لحظه‌ها هم خاص می‌شن.</div>
+    <div class="reason">✨ چون خنده‌هات ارزش یه دنیا ذوق کردن دارن.</div>
+    <div class="reason">🎀 چون «فسقلی» بودنتم برای خودت یه استایل جداست! 😂</div>
+    <div class="reason">💗 چون برای من مهمی، همین.</div>
+    <div class="reason">🌙 چون حتی از دور هم می‌تونی روزمو قشنگ‌تر کنی.</div>
+   </div>
+   <button onclick="secret()">آخرین سورپرایز 🤫</button>
+ </div>
+</section>
+
+<section class="screen hidden" id="final">
+ <div class="card">
+   <div class="gift">🎀💐🎁</div>
+   <h1>سورپرایز آخر!</h1>
+   <p>
+    اگه الان پیشت بودم، احتمالاً یه هدیه خوشگل می‌دادم دستت و می‌گفتم:
+    <br><b>«روز دخترت مبارک فسقلی، این فقط یه بهونه‌ست که بگم چقدر برام عزیزی.»</b> 💗
+   </p>
+   <div class="counter" id="counter">💗 0 تا قلب برای تو</div>
+   <button onclick="celebrate()">این دکمه رو بزن 😭💗</button>
+   <p id="after" class="hidden" style="margin-top:20px">
+     حالا دیگه صفحه رسماً پر از عشق شد 😂💗<br>
+     <b>روز دختر مبارک فسقلی من 🌷</b>
+   </p>
+ </div>
+</section>
+
+<script>
+const bg=document.getElementById('bg');
+for(let i=0;i<28;i++){
+ const h=document.createElement('div'); h.className='heart';
+ h.textContent=['💗','💕','💖','🌸','✨'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'%';
+ h.style.animationDuration=(6+Math.random()*8)+'s';
+ h.style.animationDelay=(-Math.random()*12)+'s';
+ h.style.fontSize=(14+Math.random()*18)+'px';
+ bg.appendChild(h);
+}
+function next(a,b){
+ document.getElementById(a).classList.add('hidden');
+ document.getElementById(b).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function openGift(){next('welcome','gift')}
+function showReasons(){next('gift','reasons')}
+function secret(){next('reasons','final')}
+let count=0;
+function celebrate(){
+ document.getElementById('after').classList.remove('hidden');
+ const c=document.getElementById('counter');
+ const timer=setInterval(()=>{
+   count++;
+   c.textContent='💗 '+count+' تا قلب برای تو';
+   if(count>=50) clearInterval(timer);
+ },25);
+ for(let i=0;i<70;i++){
+   setTimeout(()=>{
+    const x=document.createElement('div');
+    x.className='confetti';
+    x.textContent=['💗','💖','💕','🌸','✨','🎀'][Math.floor(Math.random()*6)];
+    x.style.left=Math.random()*100+'vw';
+    x.style.animationDuration=(1.8+Math.random()*2)+'s';
+    document.body.appendChild(x);
+    setTimeout(()=>x.remove(),4000);
+   },i*35);
+ }
+}
+</script>
+</body>
+</html>
